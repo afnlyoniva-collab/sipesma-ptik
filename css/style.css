@@ -1,0 +1,219 @@
+
+/* =================================
+   1. PENGATURAN DASAR
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f7fc;
+    color: #263650;
+    line-height: 1.6;
+}
+
+/* =================================
+   2. NAVIGASI
+================================= */
+
+.navbar {
+    background: #ffffff;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px rgba(20, 48, 90, 0.07);
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    color: #173f78;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #43536b;
+    margin-left: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #2875d0;
+}
+
+/* =================================
+   3. HERO / HALAMAN UTAMA
+================================= */
+
+.hero {
+    padding: 110px 8%;
+    background: linear-gradient(
+        120deg,
+        #e8f1ff,
+        #ffffff,
+        #eaf4ff
+    );
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 4vw, 46px);
+    color: #173f78;
+    font-weight: 800;
+    line-height: 1.25;
+    max-width: 850px;
+    margin: 0 auto 22px;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.9;
+    max-width: 680px;
+    margin: auto;
+    color: #60718a;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 15px 32px;
+    background: #245da5;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(36, 93, 165, 0.2);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #173f78;
+    transform: translateY(-3px);
+}
+
+/* =================================
+   4. BAGIAN LAYANAN SURAT
+================================= */
+
+.surat {
+    padding: 85px 8%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.surat h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #173f78;
+    margin-bottom: 45px;
+}
+
+.daftar-surat {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(230px, 1fr)
+    );
+    gap: 25px;
+}
+
+.kartu {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 14px;
+    border: 1px solid #e8edf5;
+    box-shadow: 0 5px 20px rgba(30, 55, 90, 0.05);
+    transition: 0.3s;
+}
+
+.kartu:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(30, 55, 90, 0.12);
+    border-color: #b9d3f5;
+}
+
+.kartu h3 {
+    color: #245da5;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.kartu p {
+    color: #68778c;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =================================
+   5. FOOTER
+================================= */
+
+footer {
+    background: #17365f;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+/* =================================
+   6. RESPONSIVE / TAMPILAN HP
+================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-link {
+        margin-left: 12px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 80px 6%;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .surat {
+        padding: 60px 6%;
+    }
+
+    .surat h2 {
+        font-size: 25px;
+    }
+
+    .daftar-surat {
+        grid-template-columns: 1fr;
+    }
+}
