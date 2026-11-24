@@ -9,7 +9,7 @@ if (!isset($_SESSION["id"]) || $_SESSION["role"] !== "mahasiswa") {
     exit;
 }
 
-// Memeriksa ID pengajuan surat
+// Memeriksa ID pengajuan surat mahasiswa
 if (!isset($_GET["id"]) || !ctype_digit($_GET["id"])) {
     die("ID pengajuan tidak valid.");
 }
