@@ -9,7 +9,7 @@ if (!isset($_SESSION["id"]) || $_SESSION["role"] !== "mahasiswa") {
     exit;
 }
 
-// Memeriksa ID pengajuan
+// Memeriksa ID pengajuan surat
 if (!isset($_GET["id"]) || !ctype_digit($_GET["id"])) {
     die("ID pengajuan tidak valid.");
 }
@@ -17,7 +17,7 @@ if (!isset($_GET["id"]) || !ctype_digit($_GET["id"])) {
 $user_id = (int) $_SESSION["id"];
 $pengajuan_id = (int) $_GET["id"];
 
-// Mengambil data pengajuan dan mahasiswa
+// Mengambil data pengajuan surat dan mahasiswa
 $stmt = mysqli_prepare(
     $conn,
     "SELECT p.*, j.nama_surat, j.deskripsi, u.nama, u.email
