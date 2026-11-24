@@ -13,12 +13,12 @@ if ($_SESSION["role"] != "admin") {
     exit;
 }
 
-// Membuat token keamanan formulir
+// Membuat token keamanan formulir surat
 if (!isset($_SESSION["csrf_token"])) {
     $_SESSION["csrf_token"] = bin2hex(random_bytes(32));
 }
 
-// Mengambil data pengajuan
+// Mengambil data pengajuan surat
 $sql = "SELECT
             pengajuan.id,
             users.nama,
